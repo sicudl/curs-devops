@@ -1,5 +1,5 @@
 FROM python:3.8.7
-ADD ./flaskapp/ ./opt/
+ADD ./app/ ./opt/
 WORKDIR /opt/
 EXPOSE 5000
 RUN pip install --upgrade pip
