@@ -1,0 +1,8 @@
+WTForms
+Flask_WTF
+pymongo
+Flask_PyMongo
+Flask
+Jinja2
+dnspython
+werkzeug
