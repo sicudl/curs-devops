@@ -2,10 +2,10 @@
 name: Crear_Imatge
 
 # Controls when the workflow will run
-on: workflow_dispatch
-# puh:
-#   branches:
-#     - '2_Action_Crear_Imatge'
+on:
+ push:
+   branches:
+     - '2_Action_Crear_Imatge'
 
 env:
   REGISTRY: ghcr.io
