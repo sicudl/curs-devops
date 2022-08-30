@@ -1,5 +1,4 @@
-name: Test opencms service
-
+name: Test App
 on: workflow_dispatch
 
 jobs:
