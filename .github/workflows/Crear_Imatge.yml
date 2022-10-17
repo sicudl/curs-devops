@@ -6,7 +6,7 @@ on: workflow_dispatch
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository_owner }}/flaskapp:latest
+  IMAGE_NAME: ${{ github.repository_owner }}/flaskapp
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -45,5 +45,6 @@ jobs:
         with:
           file: ./Dockerfile_devel
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: |
+            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', '2_Action_Crear_Imatge') }}
           labels: ${{ steps.meta.outputs.labels }}
