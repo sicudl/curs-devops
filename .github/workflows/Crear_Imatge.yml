@@ -6,7 +6,7 @@ on: workflow_dispatch
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository_owner }}/flaskapp
+  IMAGE_NAME: ${{ github.repository_owner }}/flaskapp:latest
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
