@@ -45,5 +45,6 @@ jobs:
         with:
           file: ./Dockerfile_devel
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: |
+            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', '2_Action_Crear_Imatge') }}
           labels: ${{ steps.meta.outputs.labels }}
